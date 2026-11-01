@@ -7,7 +7,7 @@
   president: "Name Präsident",
   vice_president: "Name Vize",
   protocol: "Protokoll",
-  date: datetime.today().display(),
+  date: datetime.today().display("[day]. [month repr:long] [year]"),
   unterzeichner: "Unterzeichner"
-
 )
+

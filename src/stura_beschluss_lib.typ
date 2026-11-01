@@ -24,6 +24,7 @@
   date: none,
   body,
 ) = [
+  #set text(font: "Liberation Sans")
   #set page(margin: (x: 3em, top: 3em, bottom: 13em))
   
 
