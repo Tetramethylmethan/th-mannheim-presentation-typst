@@ -1,0 +1,15 @@
+[package]
+name = "th-mannheim"
+version = "0.0.1"
+entrypoint = "th-mannheim.typ"
+authors = ["Falko Piwinger <@314wi>"]
+license = "MIT"
+description = "Unofficial Polylux theme for Technical University Mannheim"
+repository = ""
+keywords = ["polylux", "theme", "th","TH Mannheim","Mannheim", "Hochschule"]
+categories = ["presentation"]
+exclude = ["examples/"]
+
+[template]
+path = "template"
+entrypoint = "slides.typ"
