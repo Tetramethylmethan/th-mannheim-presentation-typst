@@ -1,5 +1,5 @@
 #import "@preview/polylux:0.4.0": *
-#import "../src/lib.typ" as hm: *
+#import "../src/slides_lib.typ" as hm: *
 
 // Set theme and metatdata
 #show: hm.setup.with(
