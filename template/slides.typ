@@ -11,14 +11,15 @@
   font: "Nimbus Sans",
   show-footer: false,
   show-footer-num-pages: true,
-  color-primary: hm.colors.red,
-  color-accent: hm.colors.red,
+  color-primary: hm.thma-colors.red,
+  color-accent: hm.thma-colors.red,
 
 )
 
 // Create title slide
 // Content is retrived from metadata
 #title-slide()
+
 
 // Table of contents slide
 // Depends on registered sections, see `#new-section()` below

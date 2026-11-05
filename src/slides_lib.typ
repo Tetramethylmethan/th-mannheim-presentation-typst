@@ -5,7 +5,7 @@
 // TH Mannheim Brand Colors
 // ============================================
 
-#let colors = (
+#let thma-colors = (
   red: rgb(252, 85, 85),
   green: rgb(74, 211, 134),
   yellow: rgb(255, 255, 0),
@@ -22,6 +22,7 @@
 
 // Metadata for access across slides
 #let meta-state = state("meta", (:))
+
 
 // ============================================
 // Footer
@@ -90,7 +91,7 @@
   #set align(center + horizon)
   #set text(fill: white)
   #set page(footer: if show-footer { thma-footer() })
-  #set page(fill: colors.blue)
+  #set page(fill: thma-colors.blue)
   
   #context {
     let m = meta-state.get()
@@ -164,8 +165,8 @@
   show-footer: true,
   show-header: true,
   show-footer-num-pages: true,
-  color-primary: colors.red,
-  color-accent: colors.red,
+  color-primary: thma-colors.red,
+  color-accent: thma-colors.red,
   font: ("Helvetica Neue", "Nimbus Sans"),
   size-base: 16pt,
   body,
@@ -203,13 +204,13 @@
   // Heading styles
   show heading.where(level: 1): set text(
     size: 28pt,
-    fill: black,
+    fill: thma-colors.blue,
     weight: "bold",
   )
 
   show heading.where(level: 2): set text(
     size: 22pt,
-    fill: colors.dark-gray,
+    fill: thma-colors.dark-gray,
     weight: "bold",
   )
 
