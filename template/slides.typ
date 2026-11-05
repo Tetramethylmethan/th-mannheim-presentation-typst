@@ -20,15 +20,12 @@
 // Content is retrived from metadata
 #title-slide()
 
+// Change the Prefix of the TOC 
+#table-of-contents(prefix:"TOP ")
 
-// Table of contents slide
-// Depends on registered sections, see `#new-section()` below
-#slide-toc()
-
-// Start a new section, name is registered and shown in table of contents
-// This is creating a slide with the name and a progress bar
-// Options: don't show slide, see example below
-#new-section("Motivation")
+// Change Numbering of the Headings
+// 1 for numbers, A for Letters "," and "." can also be used
+#show heading.where(): set heading(numbering:"1")
 
 #slide[
   = Motivation
@@ -40,9 +37,6 @@
   - This slide is using the standard `#slide` command
 ]
 
-// Start a new section without displaying a slide
-#new-section("Project Status", show-slide: false)
-
 #slide[
   #heading(level: 1)[Project Status]
   - Early stages
@@ -50,8 +44,6 @@
       - Custom layouts and section slides
 ]
 
-// New section with table of contents entry
-#new-section-orientation("Layouts")
 
 #slide-vertical("Content vertical aligned")[
   - Content is centered vertically
@@ -86,8 +78,6 @@
       compared to LaTeX.
   ],
 )
-
-#new-section-orientation("Features")
 
 #title-slide(
   title: "Title slide with overwritten values",

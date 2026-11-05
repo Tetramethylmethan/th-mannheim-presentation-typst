@@ -74,6 +74,27 @@
 
 }
 
+#let table-of-contents(title: "Inhalt", prefix: "hier nicht") = [
+  #let concPrefix(prefix, it) = {
+      [#prefix #it.prefix()] 
+  }
+  #show outline.entry.where(level: 1): it => {
+    set text(fill: thma-colors.blue, size: 1em)
+    link(
+      it.element.location(),
+      it.indented(
+        concPrefix(prefix, it),
+        it.body()
+      )
+    )
+  }
+  
+  #outline(
+    title: title,
+    target: heading.where(level: 1)
+  )
+]
+
 // ============================================
 // Title slide
 // ============================================
@@ -169,6 +190,7 @@
   color-accent: thma-colors.red,
   font: ("Helvetica Neue", "Nimbus Sans"),
   size-base: 16pt,
+  numbering: "1",
   body,
 ) = {
   // Store metadata in state
@@ -207,6 +229,7 @@
     fill: thma-colors.blue,
     weight: "bold",
   )
+
 
   show heading.where(level: 2): set text(
     size: 22pt,
@@ -318,6 +341,8 @@
 // ============================================
 // Section Support
 // ===========================================
+// 
+// TODO REMOVE ODER SO
 
 #let page-progress = toolbox.progress-ratio(ratio => {
   set grid.cell(inset: (y: .05em))
