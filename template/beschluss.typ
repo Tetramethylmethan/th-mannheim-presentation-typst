@@ -3,11 +3,10 @@
 // Setup
 #show: lib.setup.with(
   beschluss_nr: "2026-001",
-  beschluss_text: "Lorem Ipsum",
-  president: "Name Präsident",
+  president: "Falko",
   vice_president: "Name Vize",
   protocol: "Protokoll",
   date: datetime.today().display("[day]. [month repr:long] [year]"),
   unterzeichner: "Unterzeichner"
 )
-
+Lorem Ipsum

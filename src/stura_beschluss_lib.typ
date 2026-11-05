@@ -16,7 +16,6 @@
 
 #let setup(
   beschluss_nr: none,
-  beschluss_text: none,
   president: none,
   vice_president: none,
   unterzeichner: none,
@@ -67,7 +66,7 @@
 
         #context{
           align(center)[
-          #context{beschluss_text}
+          #body
 
           ]
         }
